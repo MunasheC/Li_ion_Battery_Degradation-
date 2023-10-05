@@ -22,7 +22,7 @@ impedance = filtered_data[:, 3] + 1j * (-filtered_data[:, 4])  # Complex impedan
 frequencies, impedance = preprocessing.ignoreBelowX(frequencies, impedance)
 
 # Initialize Randles circuit object
-circuit = 'R0-p(R1,C1)-p(R2-Ws1,C2)-p(R3,C3)'
+circuit = 'R0-p(R1,C1)-p(R2-Ws1,C2)-p(R3,C3)' # The p() function indicates components in parallel and the - components in series
 initial_guess = [4.18e-01, 2.64e-01, 2.13e-02, 1.17e-01, 1.62e+00, 1.42e+02, 1.42e-03, 0.2, 0.03]
 
 circuit = CustomCircuit(circuit, initial_guess=initial_guess)
